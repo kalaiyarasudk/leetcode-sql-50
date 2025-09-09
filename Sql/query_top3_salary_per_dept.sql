@@ -1,16 +1,16 @@
 
-## Problem Statement
+Problem Statement
 
-> **Find the top 3 highest-paid employees in each department who have worked on more than 1 project**, along with:
-> - Department Name
-> - Employee Name
-> - Salary
-> - Number of Projects they've worked on
-> - Total Hours Worked
->
-> Results should be ordered by:
-> - Department Name (ascending)
-> - Salary (descending)
+Find the top 3 highest-paid employees in each department who have worked on more than 1 project**, along with:
+ - Department Name
+ - Employee Name
+ - Salary
+ - Number of Projects they have worked on
+ - Total Hours Worked
+
+Results should be ordered by:
+ - Department Name (ascending)
+ - Salary (descending)
 
 
 -- Employees Table
@@ -46,7 +46,7 @@ CREATE TABLE EmployeeProjects (
 );
 
 
-solution:
+Solution:
 
 with total_project_hrs as (
 select e.employee_id, e.name, count(ep.project_id) as total_project , sum(ep.hours_worked ) as total_hrs_worked
